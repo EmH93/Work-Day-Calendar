@@ -104,6 +104,9 @@
             fivepmTextInput.attr("class", "form-control textarea past" );
         };
 
+//Appointment saved text variable grab
+var appointmentSaved = $('#appointmentSaved');
+
 //grab text input from textinput field and save to localStorage then push text to row.
 
 //9am save button event and push text to textbox
@@ -111,6 +114,7 @@
         event.preventDefault();
         nineUserValue = nineamTextInput.val();
         localStorage.setItem("9am Event", nineUserValue);
+        appointmentSaved.attr("class", "lead");
             addEventNine();
     });
 
@@ -124,6 +128,7 @@
         event.preventDefault();
         tenUserValue = tenamTextInput.val();
         localStorage.setItem("10am Event", tenUserValue);
+        appointmentSaved.attr("class", "lead");
         addEventTen();
     });
 
@@ -137,6 +142,7 @@
         event.preventDefault();
         elevenUserValue = elevenamTextInput.val();
         localStorage.setItem("11am Event", elevenUserValue);
+        appointmentSaved.attr("class", "lead");
         addEventEleven();
     });
 
@@ -150,6 +156,7 @@
         event.preventDefault();
         twelveUserValue = twelvepmTextInput.val();
         localStorage.setItem("12pm Event", twelveUserValue);
+        appointmentSaved.attr("class", "lead");
             addEventTwelve();
     });
 
@@ -163,6 +170,7 @@
         event.preventDefault();
         oneUserValue = onepmTextInput.val();
         localStorage.setItem("1pm Event", oneUserValue);
+        appointmentSaved.attr("class", "lead");
         addEventOne();
     });
 
@@ -176,6 +184,7 @@
         event.preventDefault();
         twoUserValue = twopmTextInput.val();
         localStorage.setItem("2pm Event", twoUserValue);
+        appointmentSaved.attr("class", "lead");
         addEventTwo();
     });
 
@@ -189,6 +198,7 @@
         event.preventDefault();
         threeUserValue = threepmTextInput.val();
         localStorage.setItem("3pm Event", threeUserValue);
+        appointmentSaved.attr("class", "lead");
         addEventThree();
     });
 
@@ -202,6 +212,7 @@
         event.preventDefault();
         fourUserValue = fourpmTextInput.val();
         localStorage.setItem("4pm Event", fourUserValue);
+        appointmentSaved.attr("class", "lead");
         addEventFour();
     });
 
@@ -215,6 +226,7 @@
         event.preventDefault();
         fiveUserValue = fivepmTextInput.val();
         localStorage.setItem("5pm Event", fiveUserValue);
+        appointmentSaved.attr("class", "lead");
         addEventFive();
     });
 

@@ -92,3 +92,8 @@ body {
 .container {
   padding-bottom: 50px;
 }
+
+#appointmentSaved {
+  text-align: center;
+  font-size: 16px;
+}
