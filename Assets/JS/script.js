@@ -1,23 +1,33 @@
 // variables from moment.js - day, full date and current time.
-var currentDay = moment().format('dddd');
-var currentMonthDayYear = moment().format("MMMM Do YYYY"); 
-var currentTime = moment().format('HH:mm:ss');
+    var currentDay = moment().format('dddd');
+    var currentMonthDayYear = moment().format("MMMM Do YYYY"); 
+    var currentTime = moment().format('HH:mm:ss');
+
+//variables for each row's save button 
+    var saveBtnNine = $('#saveBtn9am');
+    var saveBtnTen = $('#saveBtn10am');
+    var saveBtnEleven = $('#saveBtn11am');
+    var saveBtnTwelve = $('#saveBtn12pm');
+    var saveBtnOne = $('#saveBtn1pm');
+    var saveBtnTwo = $('#saveBtn2pm');
+    var saveBtnThree = $('#saveBtn3pm');
+    var saveBtnFour = $('#saveBtn4pm');
+    var saveBtnFive = $('#saveBtn5pm');
+
+//variables for each textinput box on calendar.
+    var nineamTextInput = $('#textEntry9am');
+    var tenamTextInput = $('#textEntry10am');
+    var elevenamTextInput = $('#textEntry11am');
+    var twelvepmTextInput = $('#textEntry12pm');
+    var onepmTextInput = $('#textEntry1pm');
+    var twopmTextInput = $('#textEntry2pm');
+    var threepmTextInput = $('#textEntry3pm');
+    var fourpmTextInput = $('#textEntry4pm');
+    var fivepmTextInput = $('#textEntry5pm');
 
 //TODO remove below once done: fake time variable so I can test the statements and log of current time
 var fakeTime = "08:23:33";
 console.log(currentTime);
-
-
-//variables for each textinput box on calendar.
-var nineamTextInput = $('#textEntry9am');
-var tenamTextInput = $('#textEntry10am');
-var elevenamTextInput = $('#textEntry11am');
-var twelvepmTextInput = $('#textEntry12pm');
-var onepmTextInput = $('#textEntry1pm');
-var twopmTextInput = $('#textEntry2pm');
-var threepmTextInput = $('#textEntry3pm');
-var fourpmTextInput = $('#textEntry4pm');
-var fivepmTextInput = $('#textEntry5pm');
 
 //Adding current day and full date to jumbotron header
     var displayCurrentDayP = $('#currentDay');
@@ -86,3 +96,5 @@ var fivepmTextInput = $('#textEntry5pm');
         } else if(currentTime > "17:59:59") {
             fivepmTextInput.attr("class", "form-control textarea past" );
         };
+
+//grab text input from textinput field and save to localStorage then push text to row.
