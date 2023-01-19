@@ -98,3 +98,66 @@ console.log(currentTime);
         };
 
 //grab text input from textinput field and save to localStorage then push text to row.
+
+//9am save button event
+saveBtnNine.on("click", function(event){
+    event.preventDefault();
+    nineUserValue = nineamTextInput.val();
+    localStorage.setItem("9am Event", nineUserValue);
+});
+
+//10am save button event
+saveBtnTen.on("click", function(event){
+    event.preventDefault();
+    tenUserValue = tenamTextInput.val();
+    localStorage.setItem("10am Event", tenUserValue);
+});
+
+//11am save button event
+saveBtnEleven.on("click", function(event){
+    event.preventDefault();
+    elevenUserValue = elevenamTextInput.val();
+    localStorage.setItem("11am Event", elevenUserValue);
+});
+
+//12pm save button event
+saveBtnTwelve.on("click", function(event){
+    event.preventDefault();
+    twelveUserValue = twelvepmTextInput.val();
+    localStorage.setItem("12pm Event", twelveUserValue);
+});
+
+//1pm save button event
+saveBtnOne.on("click", function(event){
+    event.preventDefault();
+    oneUserValue = onepmTextInput.val();
+    localStorage.setItem("1pm Event", oneUserValue);
+});
+
+//2pm save button event
+saveBtnTwo.on("click", function(event){
+    event.preventDefault();
+    twoUserValue = twopmTextInput.val();
+    localStorage.setItem("2pm Event", twoUserValue);
+});
+
+//3pm save button event
+saveBtnThree.on("click", function(event){
+    event.preventDefault();
+    threeUserValue = threepmTextInput.val();
+    localStorage.setItem("3pm Event", threeUserValue);
+});
+
+//4pm save button event
+saveBtnFour.on("click", function(event){
+    event.preventDefault();
+    fourUserValue = fourpmTextInput.val();
+    localStorage.setItem("4pm Event", fourUserValue);
+});
+
+//5pm save button event
+saveBtnFive.on("click", function(event){
+    event.preventDefault();
+    fiveUserValue = fivepmTextInput.val();
+    localStorage.setItem("5pm Event", fiveUserValue);
+});
