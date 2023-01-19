@@ -4,10 +4,12 @@ body {
   line-height: 1;
 }
 
-textarea {
+.textarea {
   background: transparent;
-  border: none;
+  border-top: none;
+  border-bottom: 1px solid #000000;
   resize: none;
+  height: 80px;
   color: #000000;
   border-left: 1px solid black;
   padding: 10px;
@@ -40,6 +42,8 @@ textarea {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  border-left: none;
+  border-bottom: none;
 }
 
 .past {
@@ -47,18 +51,34 @@ textarea {
   color: white;
 }
 
+.past:focus {
+  background-color: #d3d3d3;
+}
+
 .present {
   background-color: #ff6961;
   color: white;
 }
+
+.present:focus {
+  background-color: #ff6961;
+}
+
 
 .future {
   background-color: #77dd77;
   color: white;
 }
 
+.future:focus {
+  background-color: #77dd77;
+}
+
 .saveBtn {
   border-left: 1px solid black;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
