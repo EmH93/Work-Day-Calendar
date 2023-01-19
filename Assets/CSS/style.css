@@ -7,7 +7,6 @@ body {
 .textarea {
   background: transparent;
   border-top: none;
-  border-bottom: 1px solid #000000;
   resize: none;
   height: 80px;
   color: #000000;
@@ -88,4 +87,8 @@ body {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+.container {
+  padding-bottom: 50px;
 }
