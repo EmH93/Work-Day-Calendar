@@ -29,6 +29,10 @@
 var fakeTime = "08:23:33";
 console.log(currentTime);
 
+//On load add existing events to calendar
+addEventTwelve();
+addEventNine();
+
 //Adding current day and full date to jumbotron header
     var displayCurrentDayP = $('#currentDay');
     displayCurrentDayP.text(currentDay + ', ' + currentMonthDayYear);
@@ -100,11 +104,16 @@ console.log(currentTime);
 //grab text input from textinput field and save to localStorage then push text to row.
 
 //9am save button event
-saveBtnNine.on("click", function(event){
-    event.preventDefault();
-    nineUserValue = nineamTextInput.val();
-    localStorage.setItem("9am Event", nineUserValue);
-});
+    saveBtnNine.on("click", function(event){
+        event.preventDefault();
+        nineUserValue = nineamTextInput.val();
+        localStorage.setItem("9am Event", nineUserValue);
+    });
+
+        function addEventNine() {
+            var historicEventNine = localStorage.getItem("9am Event");
+            nineamTextInput.attr("placeholder", historicEventNine);
+        };
 
 //10am save button event
 saveBtnTen.on("click", function(event){
@@ -120,12 +129,18 @@ saveBtnEleven.on("click", function(event){
     localStorage.setItem("11am Event", elevenUserValue);
 });
 
-//12pm save button event
-saveBtnTwelve.on("click", function(event){
-    event.preventDefault();
-    twelveUserValue = twelvepmTextInput.val();
-    localStorage.setItem("12pm Event", twelveUserValue);
-});
+//12pm save button event and push text to textbox
+    saveBtnTwelve.on("click", function(event){
+        event.preventDefault();
+        twelveUserValue = twelvepmTextInput.val();
+        localStorage.setItem("12pm Event", twelveUserValue);
+            addEventTwelve();
+    });
+
+        function addEventTwelve() {
+            var historicEventTwelve = localStorage.getItem("12pm Event");
+            twelvepmTextInput.attr("placeholder", historicEventTwelve);
+        };
 
 //1pm save button event
 saveBtnOne.on("click", function(event){
